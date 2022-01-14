@@ -15,14 +15,14 @@ if(CMAKE_SYSTEM_PROCESSOR MATCHES "(x86_64)|(AMD64|amd64)|(^i.86$)")
 		)
 
 	project(VectorSimilaritySpaces_avx)
-	add_compile_options(-march=x86-64-v3)
+	# add_compile_options(-march=x86-64-v3)
 	add_library(VectorSimilaritySpaces_avx STATIC
 		L2/L2_AVX.cpp
 		IP/IP_AVX.cpp
 		)
 
 	project(VectorSimilaritySpaces_sse)
-	add_compile_options(-march=x86-64-v2)
+	# add_compile_options(-march=x86-64-v2)
 	add_library(VectorSimilaritySpaces_sse STATIC
 		L2/L2_SSE.cpp
 		IP/IP_SSE.cpp
